@@ -37,11 +37,10 @@ public class EmployeeAdapter extends RecyclerView.Adapter<EmployeeAdapter.Employ
     public void onBindViewHolder(@NonNull EmployeeViewHolder holder, int position) {
 
         Employee employee = employeeList.get(position);
-        holder.id.append(String.valueOf(employee.getId()));
-        holder.name.append(employee.getEmployee_name());
-        holder.salary.append(employee.getEmployee_salary());
-        holder.age.append(String.valueOf(employee.getEmployee_age()));
-
+        holder.id.setText(String.valueOf(employee.getId()));
+        holder.name.setText(employee.getEmployee_name());
+        holder.salary.setText(employee.getEmployee_salary());
+        holder.age.setText(String.valueOf(employee.getEmployee_age()));
 
     }
 

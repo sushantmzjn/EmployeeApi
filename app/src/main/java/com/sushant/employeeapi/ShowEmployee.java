@@ -34,6 +34,7 @@ public class ShowEmployee extends AppCompatActivity {
         setContentView(R.layout.activity_show_employee);
 
         recyclerView = findViewById(R.id.etOutput);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(base_url)
@@ -57,7 +58,7 @@ public class ShowEmployee extends AppCompatActivity {
 
                 EmployeeAdapter employeeAdapter = new EmployeeAdapter(ShowEmployee.this,lstEmployee);
                 recyclerView.setAdapter(employeeAdapter);
-                recyclerView.setLayoutManager(new LinearLayoutManager(ShowEmployee.this));
+
 
 
 //                for (Employee employee : lstEmployee) {
